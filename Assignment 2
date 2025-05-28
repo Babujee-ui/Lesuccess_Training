@@ -1,0 +1,111 @@
+1.Voewls or Consonants
+
+package Assignment2;
+
+import java.util.Scanner;
+
+public class characters {
+    public static void main(String[] args) {
+        Scanner s =new Scanner(System.in);
+        System.out.print("Enter the Character:");
+        char ch=s.next().charAt(0);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            System.out.println(ch + " is Vowel");
+        } else {
+            System.out.println(ch + " is Consonant");
+        }
+    }
+}
+
+
+2.Grade based on mark
+
+
+package Assignment2;
+
+import java.util.Scanner;
+
+public class ifelse {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter the mark:");
+        int m =s.nextInt();
+        if( m>=90){
+            System.out.println("Grade A");
+        }
+        else if ( m>=75) {
+            System.out.println("Grade B");
+        }
+        else if (m>=60) {
+            System.out.println("Grade C");
+        }
+        else if (m>=40) {
+            System.out.println("Grade D");
+        }
+        else{
+            System.out.println("Fail");
+        }
+
+    }
+}
+
+
+3.Interest
+
+
+package Assignment2;
+
+import java.util.Scanner;
+
+public class interest {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter 1 or 2 :");
+        int n =s.nextInt();
+        System.out.print("Enter p:");
+        int p=s.nextInt();
+        System.out.print("Enter r:");
+        int r=s.nextInt();
+        System.out.print("Enter t:");
+        int t=s.nextInt();
+        if(n==1){
+            System.out.print("S.I:"+(p*r*t)/100);
+        } else if (n==2) {
+            System.out.print("C.I:"+p*Math.pow((1+r/100),t));
+        }
+    }
+}
+
+
+4.Prime Number 
+
+package Assignment2;
+
+import java.util.Scanner;
+
+
+
+public class PrimeorNot {
+
+    public static boolean Prime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter the number:");
+        int n=s.nextInt();
+        for(int i=1;i<=n;i++){
+            if(Prime(i)){
+                System.out.print(i +" ");
+            }
+        }
+    }
+}
