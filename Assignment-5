@@ -86,4 +86,30 @@ public class power {
     }
 }
 
-4.
+4. Count occurrences of a Character in String:
+
+package Assignment5;
+
+import java.util.Scanner;
+
+public class CountElement {
+    public static int countChar(String str, char ch, int count) {
+        if (count == str.length()) {
+            return 0;
+        }
+        if (str.charAt(count) == ch) {
+            return 1 + countChar(str, ch, count + 1);
+        } else {
+            return countChar(str, ch,count + 1);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the string: ");
+        String input = scanner.nextLine();
+        char target = scanner.next().charAt(0);
+        int count = countChar(input, target, 0);
+        System.out.println("Output: " + count);
+
+    }
+}
