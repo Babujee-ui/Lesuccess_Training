@@ -1,0 +1,52 @@
+1.Palindrome or not
+
+package Assignment4;
+
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter the string value:");
+        String str=s.nextLine();
+        String reverse="";
+        for(int i=str.length()-1;i>=0;i--){
+            reverse=reverse+str.charAt(i);
+        }
+        System.out.println("Reversed :"+reverse);
+        if(str.equals(reverse)){
+            System.out.println("palindrome");
+        }
+        else {
+            System.out.println("Not Palindrome");
+        }
+    }
+}
+
+
+
+2.Count of Vowels and Consonants
+
+package Assignment4;
+
+import java.util.Scanner;
+
+public class VowelConsonant {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter the string value:");
+        String str=s.nextLine();
+        int vowels=0;
+        int con=0;
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='a'||str.charAt(i)=='e' || str.charAt(i)=='i' || str.charAt(i)=='o' || str.charAt(i)=='u'){
+                vowels++;
+            }
+            else {
+                con++;
+            }
+        }
+        System.out.println("Vowels:"+vowels);
+        System.out.println("Consonants:"+con);
+    }
+}
