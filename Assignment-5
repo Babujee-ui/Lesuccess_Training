@@ -1,0 +1,89 @@
+Recursion Based Problem
+
+1. Find the number of digits in the number:
+
+package Assignment5;
+
+import java.util.Scanner;
+
+public class DigitCount {
+
+    static int count(int a) {
+        if(a<10) {
+            return 1;
+        }
+        else {
+            return 1+count(a/10);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the value:");
+        int n=sc.nextInt();
+        System.out.println("The number of digits in "+n+" is "+count(n));
+        }
+    }
+
+
+2.Palindrome or not:
+
+package Assignment5;
+
+import java.util.Scanner;
+
+public class palindrome {
+
+    public static String reverseString(String str) {
+        if (str.length() <= 1) {
+            return str;
+        }
+        return reverseString(str.substring(1)) + str.charAt(0);
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Enter the string value: ");
+        String str = s.nextLine();
+        String reverse = reverseString(str);
+        System.out.println("Reversed value of "+str+" is " + reverse);
+        if (str.equals(reverse)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+
+    }
+
+}
+
+
+
+
+
+3.Calculate  the power of the number:
+
+package Assignment5;
+
+import java.util.Scanner;
+
+public class power {
+    static int power(int a,int b){
+        if(b==0){
+            return 1;
+        }
+        return a*power(a,b-1);
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter a:");
+        int a=s.nextInt();
+        System.out.print("Enter b:");
+        int b=s.nextInt();
+        System.out.println(power(a,b));
+
+    }
+}
+
+4.
