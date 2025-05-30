@@ -1,0 +1,26 @@
+1.Search Element in the Array
+
+package Assignment3;
+
+import java.util.Scanner;
+
+public class Searchelement {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter the value:");
+        int n=s.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=s.nextInt();
+        }
+        System.out.print("Enter the Search element:");
+        int x=s.nextInt();
+        for(int  i=0;i<n;i++){
+            if(arr[i]==x){
+                x=arr[i];
+                System.out.print(i);
+            }
+        }
+
+    }
+}
