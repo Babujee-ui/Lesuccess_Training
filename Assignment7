@@ -1,0 +1,82 @@
+1.Class Calculator
+
+ package Assignment7;
+
+import java.util.Scanner;
+
+public class ClassCalculator {
+    int result=86;
+    static int operationCount(int a,int b){
+       int result=a+b;
+       return result;
+    }
+    public void  add(int a,int b){
+        System.out.println(a+b);
+    }
+    static void displayOperationCount(){
+        int a=5;
+        int b=10;
+        System.out.println(a+b);
+    }
+
+    public static void main(String[] args) {
+        ClassCalculator obj= new ClassCalculator();
+        System.out.println(obj.result);
+        System.out.println(operationCount(10,11));
+        obj.add(5,6);
+        displayOperationCount();
+
+    }
+}
+
+2.Bank Account
+
+package Assignment7;
+
+import java.util.Scanner;
+
+public class BankAccount {
+    private int balance=1000;
+    private int deposit(int a){
+        balance+=a;
+        return a;
+    }
+    private int getBalance(){
+        return balance;
+    }
+    public static void main(String[] args) {
+            BankAccount obj=new BankAccount();
+            System.out.println("Balance: "+obj.balance);
+            System.out.println("Deposit: "+obj.deposit(500));
+            System.out.println("Bank Balance: "+obj.getBalance());
+    }
+}
+
+
+3.Method Overloaded
+
+package Assignment7;
+
+public class OverLoaded {
+     static String name;
+     int rollno;
+    public void student(String name, int rollno){
+        this.name=name;
+        this.rollno=rollno;
+        System.out.println("Student name: "+name);
+        System.out.println("RollNo: "+rollno);
+    }
+    public void student(int rollno){
+        System.out.println(name="unknown");
+        System.out.println("RollNo: "+rollno);
+    }
+    public static void display(){
+        OverLoaded obj = new OverLoaded();
+        obj.student("Esakki", 16);
+        OverLoaded obj1 = new OverLoaded();
+        obj1.student(18);
+    }
+    public static void main(String[] args) {
+       display();
+    }
+}
